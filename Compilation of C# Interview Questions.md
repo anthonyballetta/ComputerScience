@@ -281,3 +281,7 @@ we want to transfer current page request to another .aspx page on the same serve
 we want to preserve server resources and avoid the unnecessary roundtrips to the server
 we want to preserve Query String and Form Variables (optionally)
 we don't need to show the real URL where we redirected the request in the users Web Browser
+
+# 33. What is a method?
+
+A method is a code block that contains a series of statements. A program causes the statements to be executed by calling the method and specifying any required method arguments. In C#, every executed instruction is performed in the context of a method. The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.
