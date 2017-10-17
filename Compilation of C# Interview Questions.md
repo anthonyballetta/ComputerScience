@@ -230,3 +230,54 @@ A collection works as a container for instances of other classes. All classes im
 # 28. What is delegate in C#?
 
 A delegate in C# is an object that holds the reference to a method. It is like function pointer in C++.
+
+# 29. What is the purpose of the global.asax file?
+
+Effectively, global.asax allows you to write code that runs in response to "system level" events, such as the application starting, a session ending, an application error occuring, without having to try and shoe-horn that code into each and every page of your site.
+
+You can use it by by choosing Add > New Item > Global Application Class in Visual Studio. Once you've added the file, you can add code under any of the events that are listed (and created by default, at least in Visual Studio 2008):
+
+Application_Start
+Application_End
+Session_Start
+Session_End
+Application_BeginRequest
+Application_AuthenticateRequest
+Application_Error
+There are other events that you can also hook into, such as "LogRequest".
+
+# 30. Difference between GET and POST.
+
+According to Wikipedia:
+
+GET requests a representation of the specified resource. Note that GET should not be used for operations that cause side-effects, such as using it for taking actions in web applications. One reason for this is that GET may be used arbitrarily by robots or crawlers, which should not need to consider the side effects that a request should cause.
+and
+
+POST submits data to be processed (e.g., from an HTML form) to the identified resource. The data is included in the body of the request. This may result in the creation of a new resource or the updates of existing resources or both.
+So essentially GET is used to retrieve remote data, and POST is used to insert/update remote data.
+
+# 31. Which is more secure between GET and POST?
+
+POST is more secure than GET for a couple of reasons.
+
+GET parameters are passed via URL. This means that parameters are stored in server logs, and browser history. When using GET, it makes it very easy to alter the data being submitted the the server as well, as it is right there in the address bar to play with.
+
+The problem when comparing security between the two is that POST may deter the casual user, but will do nothing to stop someone with malicious intent. It is very easy to fake POST requests, and shouldn't be trusted outright.
+
+The biggest security issue with GET is not malicious intent of the end-user, but by a third party sending a link to the end-user. I cannot email you a link that will force a POST request, but I most certainly can send you a link with a malicious GET request.
+
+# 32. Difference between Server.Transfer and Response.Redirect
+
+Response.Redirect should be used when:
+
+we want to redirect the request to some plain HTML pages on our server or to some other web server
+we don't care about causing additional roundtrips to the server on each request
+we do not need to preserve Query String and Form Variables from the original request
+we want our users to be able to see the new redirected URL where he is redirected in his browser (and be able to bookmark it if its necessary)
+
+Server.Transfer should be used when:
+
+we want to transfer current page request to another .aspx page on the same server
+we want to preserve server resources and avoid the unnecessary roundtrips to the server
+we want to preserve Query String and Form Variables (optionally)
+we don't need to show the real URL where we redirected the request in the users Web Browser
