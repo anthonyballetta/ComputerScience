@@ -95,7 +95,7 @@ SomeClass.StaticMethod();    //Fine
 ```
 
 # 6. What is the new operator? 
-The new operator creates an instance of an object.
+The new operator creates an instance of an class.
 
 # 7. What is the ‘this’ keyword?
 The ‘this’ keyword is a reference to the current object.	
