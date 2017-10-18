@@ -118,10 +118,41 @@ By calling Array.Sort() and then Array.Reverse() methods.
 
 Yes, the keyword 'sealed' will prevent this method from being inherited.
 
-# 12. What is method overloading?
+# 12. What is method overloading, what is method overriding?
 
 Overloading is when you have multiple methods in the same scope, with the same name but different signatures.
 
+Overriding is a principle that allows you to change the functionality of a method in a child class.
+
+#### Implementation examples
+```
+//Overloading
+public class test
+{
+    public void getStuff(int id)
+    {}
+    public void getStuff(string name)
+    {}
+}
+
+//Overriding
+public class test
+{
+        public virtual void getStuff(int id)
+        {
+            //Get stuff default location
+        }
+}
+
+public class test2 : test
+{
+        public override void getStuff(int id)
+        {
+            //base.getStuff(id);
+            //or - Get stuff new location
+        }
+}
+```
 # 12. What are the different ways a method can be overloaded?
 
 Different parameter data types, different number of parameters, different order of parameters.
