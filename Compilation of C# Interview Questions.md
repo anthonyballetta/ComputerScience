@@ -329,3 +329,7 @@ A method is a code block that contains a series of statements. A program causes 
 When an argument is passed by value (the default in C#), a copy of its value is made and passed to the called method. Changes to the copy do not affect the original variable’s value in the caller. This prevents the accidental side effects that so greatly hinder the development of correct and reliable software systems. Each argument that’s been passed in the programs so far has been passed by value. When an argument is passed by reference, the caller gives the method the ability to access and modify the caller’s original variable—no copy is passed.
 
 A disadvantage of pass-by-value is that, if a large data item is being passed, copying that data can take a considerable amount of execution time and memory space.
+
+# 35. What is a pointer? 
+
+A pointer is a value that contains the memory address of another variable.
