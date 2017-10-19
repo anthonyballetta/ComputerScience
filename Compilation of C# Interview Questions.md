@@ -279,13 +279,20 @@ There are other events that you can also hook into, such as "LogRequest".
 
 # 30. Difference between GET and POST.
 
-According to Wikipedia:
+GET requests data from a specified resource while POST submits data to be processed to a specific resource. 
 
-GET requests a representation of the specified resource. Note that GET should not be used for operations that cause side-effects, such as using it for taking actions in web applications. One reason for this is that GET may be used arbitrarily by robots or crawlers, which should not need to consider the side effects that a request should cause.
-and
+Note that the query string (name/value pairs) is sent in the URL of a GET request:
+```
+/test/demo_form.php?name1=value1&name2=value2
+```
 
-POST submits data to be processed (e.g., from an HTML form) to the identified resource. The data is included in the body of the request. This may result in the creation of a new resource or the updates of existing resources or both.
-So essentially GET is used to retrieve remote data, and POST is used to insert/update remote data.
+Note that the query string (name/value pairs) is sent in the HTTP message body of a POST request:
+
+```
+POST /test/demo_form.php HTTP/1.1
+Host: w3schools.com
+name1=value1&name2=value2
+```
 
 # 31. Which is more secure between GET and POST?
 
@@ -316,3 +323,9 @@ we don't need to show the real URL where we redirected the request in the users 
 # 33. What is a method?
 
 A method is a code block that contains a series of statements. A program causes the statements to be executed by calling the method and specifying any required method arguments. In C#, every executed instruction is performed in the context of a method. The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.
+
+# 34. What is the difference between passing by value and by reference?
+
+When an argument is passed by value (the default in C#), a copy of its value is made and passed to the called method. Changes to the copy do not affect the original variable’s value in the caller. This prevents the accidental side effects that so greatly hinder the development of correct and reliable software systems. Each argument that’s been passed in the programs so far has been passed by value. When an argument is passed by reference, the caller gives the method the ability to access and modify the caller’s original variable—no copy is passed.
+
+A disadvantage of pass-by-value is that, if a large data item is being passed, copying that data can take a considerable amount of execution time and memory space.
