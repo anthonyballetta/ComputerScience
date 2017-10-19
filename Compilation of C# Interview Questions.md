@@ -333,3 +333,11 @@ A disadvantage of pass-by-value is that, if a large data item is being passed, c
 # 35. What is a pointer? 
 
 A pointer is a value that contains the memory address of another variable.
+
+# 36. What are generics?
+
+Generics refers to the technique of writing the code for a class without specifying the data type(s) that the class works on.
+
+You specify the data type when you declare an instance of a generic class. This allows a generic class to be specialized for many different data types while only having to write the class once.
+
+A great example are the many collection classes in .NET. Each collection class has it's own implementation of how the collection is created and managed. But they use generics to allow their class to work with collections of any type.
