@@ -260,7 +260,7 @@ A collection works as a container for instances of other classes. All classes im
 
 # 28. What is delegate in C#?
 
-A delegate in C# is an object that holds the reference to a method. It is like function pointer in C++.
+A delegate in C# is an object that holds the reference to a method. It is similar to function pointer in C++.
 
 # 29. What is the purpose of the global.asax file?
 
