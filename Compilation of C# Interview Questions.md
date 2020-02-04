@@ -1,3 +1,15 @@
+# What is MVC?
+
+MVC is a software architecture - the structure of the system - that separates domain/application/business (whatever you prefer) logic from the rest of the user interface. It does this by separating the application into three parts: the model, the view, and the controller.
+
+The model manages fundamental behaviors and data of the application. It can respond to requests for information, respond to instructions to change the state of its information, and even to notify observers in event-driven systems when information changes. This could be a database, or any number of data structures or storage systems. In short, it is the data and data-management of the application.
+
+The view effectively provides the user interface element of the application. It'll render data from the model into a form that is suitable for the user interface.
+
+The controller receives user input and makes calls to model objects and the view to perform appropriate actions.
+
+All in all, these three components work together to create the three basic components of MVC.
+
 # 1. What is an extension method?
 
 An extension method enables us to add methods to existing types without creating a new derived type, recompiling, or modify the original types. We can say that it extends the functionality of an existing type in .NET. An extension method is a static method to the existing static class. We call an extension method in the same general way; there is no difference in calling. It uses the "this" keyword as the first parameter with a type in .NET and this method will be called by a given type instance on the client side.
